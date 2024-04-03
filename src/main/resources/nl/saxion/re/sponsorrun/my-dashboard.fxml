@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="nl.saxion.re.sponsorrun.controllers.MyDashboard"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.MyDashboard">
+   <effect>
+      <Blend />
+   </effect>
+   <children>
+      <Pane layoutX="25.0" layoutY="14.0" prefHeight="100.0" prefWidth="700.0" />
+      <Pane layoutX="28.0" layoutY="440.0" prefHeight="197.0" prefWidth="251.0">
+         <children>
+            <TableView layoutY="-1.0" prefHeight="200.0" prefWidth="251.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children></Pane>
+      <Pane cache="true" layoutX="440.0" layoutY="114.0" prefHeight="174.0" prefWidth="295.0">
+         <children>
+            <Button layoutX="48.0" layoutY="13.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Nieuwe deelnemer toevoegen" />
+            <Button layoutX="48.0" layoutY="61.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Alle deelnemers weergeven" />
+            <Button layoutX="48.0" layoutY="132.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Goede doelen" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <GridPane layoutX="274.0" layoutY="439.0" prefHeight="198.0" prefWidth="450.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.4" minWidth="10.0" prefWidth="150.4" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="62.4" minHeight="4.399999999999999" prefHeight="56.4" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Pane layoutX="25.0" layoutY="162.0" prefHeight="255.0" prefWidth="251.0">
+         <children>
+            <TableView prefHeight="200.0" prefWidth="251.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
