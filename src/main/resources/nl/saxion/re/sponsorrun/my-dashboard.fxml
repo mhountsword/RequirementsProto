@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.MyDashboard">
+<AnchorPane fx:id="mainPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.MyDashboard">
    <effect>
       <Blend />
    </effect>
    <children>
       <Pane layoutX="25.0" layoutY="14.0" prefHeight="100.0" prefWidth="700.0" />
-      <Pane layoutX="28.0" layoutY="440.0" prefHeight="197.0" prefWidth="251.0">
+      <Pane fx:id="buttonPane" cache="true" layoutX="440.0" layoutY="114.0" prefHeight="174.0" prefWidth="295.0">
          <children>
-            <TableView layoutY="-1.0" prefHeight="200.0" prefWidth="251.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
-         </children></Pane>
-      <Pane cache="true" layoutX="440.0" layoutY="114.0" prefHeight="174.0" prefWidth="295.0">
-         <children>
-            <Button layoutX="48.0" layoutY="13.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Nieuwe deelnemer toevoegen" />
+            <Button layoutX="48.0" layoutY="13.0" mnemonicParsing="false" onAction="#onSponsorAdded" prefHeight="29.0" prefWidth="200.0" text="Nieuwe deelnemer toevoegen" />
             <Button layoutX="48.0" layoutY="61.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Alle deelnemers weergeven" />
             <Button layoutX="48.0" layoutY="132.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="200.0" text="Goede doelen" />
          </children>
@@ -30,26 +22,47 @@
             <Insets />
          </opaqueInsets>
       </Pane>
-      <GridPane layoutX="274.0" layoutY="439.0" prefHeight="198.0" prefWidth="450.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.4" minWidth="10.0" prefWidth="150.4" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints maxHeight="62.4" minHeight="4.399999999999999" prefHeight="56.4" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="79.60000000000001" minHeight="10.0" prefHeight="47.60000000000001" vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
-      <Pane layoutX="25.0" layoutY="162.0" prefHeight="255.0" prefWidth="251.0">
+      <Pane fx:id="paneOne" layoutX="28.0" layoutY="102.0" prefHeight="255.0" prefWidth="251.0">
          <children>
-            <TableView prefHeight="200.0" prefWidth="251.0">
-               <columns>
-                  <TableColumn prefWidth="75.0" text="C1" />
-                  <TableColumn prefWidth="75.0" text="C2" />
-               </columns>
-            </TableView>
+            <GridPane layoutX="26.0" layoutY="28.0" prefHeight="200.0" prefWidth="200.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#sponsorButton" prefHeight="26.0" prefWidth="208.0" text="Jan Willem" />
+                  <Button mnemonicParsing="false" onAction="#sponsorButton" prefHeight="26.0" prefWidth="218.0" text="Geert Heertink" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#sponsorButton" prefHeight="26.0" prefWidth="237.0" text="Pieter Jan" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#sponsorButton" prefHeight="26.0" prefWidth="235.0" text="Jean-Pierre de 3rde" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#sponsorButton" prefHeight="26.0" prefWidth="244.0" text="Barry Batsbak" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <Label layoutX="39.0" layoutY="14.0" text="Recent toegevoegde deelnemers" />
+         </children>
+      </Pane>
+      <TableView layoutX="28.0" layoutY="383.0" prefHeight="200.0" prefWidth="251.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="76.20001220703125" text="C2" />
+            <TableColumn prefWidth="76.20001220703125" text="C3" />
+        </columns>
+      </TableView>
+      <Pane layoutX="296.0" layoutY="351.0">
+         <children>
+            <LineChart prefHeight="255.0" prefWidth="434.0" title="Sponsoren in februari">
+              <xAxis>
+                <CategoryAxis label="Week" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Sponsoren" side="LEFT" />
+              </yAxis>
+            </LineChart>
          </children>
       </Pane>
    </children>
