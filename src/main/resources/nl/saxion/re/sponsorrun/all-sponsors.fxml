@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.AllSponsors">
+   <children>
+      <AnchorPane maxHeight="750.0" maxWidth="750.0" minHeight="750.0" minWidth="750.0" prefHeight="750.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="263.0" layoutY="14.0" prefHeight="67.0" prefWidth="223.0" text="Overzicht alle deelnemers">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField layoutX="96.0" layoutY="295.0" text="Zoeken" />
+            <Button layoutX="503.0" layoutY="258.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Pas geslecteerde aan" />
+            <Pane layoutX="503.0" layoutY="295.0">
+               <children>
+                  <ChoiceBox prefWidth="150.0" />
+                  <Label layoutX="52.0" layoutY="4.0" text="Sorteren" />
+               </children>
+            </Pane>
+            <GridPane layoutX="96.0" layoutY="333.0" prefHeight="215.0" prefWidth="558.0" vgap="5.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="26.400000000000006" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="562.0000114440918" minWidth="10.0" prefWidth="532.8000000000001" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="42.8" minHeight="10.0" prefHeight="28.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="42.8" minHeight="10.0" prefHeight="28.8" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="42.8" minHeight="10.0" prefHeight="28.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="41.60000000000001" minHeight="10.0" prefHeight="29.600000000000005" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="24.0" prefWidth="532.0" text="Deelnemer 1" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="14.0" prefWidth="680.0" text="Deelnemer 5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button layoutX="10.0" layoutY="87.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="27.0" prefWidth="694.0" text="Deelenemer 7" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button layoutX="10.0" layoutY="87.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="27.0" prefWidth="644.0" text="Deelnemer 6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button layoutX="10.0" layoutY="156.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="26.0" prefWidth="553.0" text="Deelnemer 3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="26.0" prefWidth="540.0" text="Deelnemer 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="34.0" prefWidth="738.0" text="Deelenemer 8" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#openSponsorInfo" prefHeight="23.0" prefWidth="617.0" text="Deelnemer 4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox mnemonicParsing="false" />
+                  <CheckBox layoutX="10.0" layoutY="12.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="1" />
+                  <CheckBox layoutX="10.0" layoutY="38.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="2" />
+                  <CheckBox layoutX="10.0" layoutY="64.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="3" />
+                  <CheckBox layoutX="10.0" layoutY="92.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="4" />
+                  <CheckBox layoutX="10.0" layoutY="120.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="5" />
+                  <CheckBox layoutX="10.0" layoutY="148.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="6" />
+                  <CheckBox layoutX="10.0" layoutY="176.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="80.0" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <Button fx:id="dashboardButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#openDashboard" prefHeight="19.0" prefWidth="80.0" text="Terug" />
+            <ScrollBar layoutX="662.0" layoutY="333.0" orientation="VERTICAL" prefHeight="215.0" prefWidth="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

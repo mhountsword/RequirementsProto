@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="750.0" minWidth="750.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.AllCharities">
+   <children>
+      <GridPane layoutX="14.0" layoutY="241.0" prefHeight="237.0" prefWidth="722.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" />
+            <Button layoutX="10.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="2" />
+            <Button layoutX="10.0" layoutY="57.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="1" />
+            <Button layoutX="10.0" layoutY="98.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="3" />
+            <Button layoutX="10.0" layoutY="138.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="4" />
+            <Button layoutX="10.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Button fx:id="dashboardButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#dashboardButtonOnClick" prefHeight="14.0" prefWidth="90.0" text="Terug" />
+      <Label alignment="CENTER" layoutX="257.0" layoutY="40.0" prefHeight="80.0" prefWidth="235.0" text="Goede doelen overzicht">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
