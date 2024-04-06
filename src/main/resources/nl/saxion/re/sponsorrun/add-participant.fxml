@@ -108,5 +108,6 @@
       </GridPane>
       <Button fx:id="dashboardButton" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" onAction="#dashboardButtonOnClick" prefHeight="14.0" prefWidth="90.0" text="Terug" AnchorPane.bottomAnchor="708.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="646.0" AnchorPane.topAnchor="14.0" />
       <TextField opacity="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="200.0" />
+      <Button layoutX="598.0" layoutY="15.0" mnemonicParsing="false" text="Deelnemer toevoegen" />
    </children>
 </AnchorPane>
