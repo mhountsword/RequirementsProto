@@ -27,7 +27,7 @@
             <Button layoutX="10.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="794.0" text="Goed doel" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button fx:id="dashboardButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#dashboardButtonOnClick" prefHeight="14.0" prefWidth="90.0" text="Terug" />
+      <Button fx:id="dashboardButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#dashboardButtonOnClick" prefHeight="14.0" prefWidth="90.0" text="Terug" AnchorPane.bottomAnchor="710.4" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="645.6" AnchorPane.topAnchor="14.0" />
       <Label alignment="CENTER" layoutX="257.0" layoutY="40.0" prefHeight="80.0" prefWidth="235.0" text="Goede doelen overzicht">
          <font>
             <Font size="18.0" />
